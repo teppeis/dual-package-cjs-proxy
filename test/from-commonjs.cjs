@@ -1,7 +1,13 @@
-const sut = require("../index.cjs");
+const { getFileSize, getStatusCode, syncFoo } = require("../index.cjs");
 
-sut.getFileSize(__filename).then((size) => console.log(`${size} bytes`));
-sut
-  .getStatusCode("https://www.google.com")
-  .then((statusCode) => console.log(`Status Code: ${statusCode}`));
-console.log(sut.syncFoo());
+console.log("`require` from CommonJS\n");
+
+(async () => {
+  const size = await getFileSize(__filename);
+  console.log(`${size} bytes`);
+
+  const statusCode = await getStatusCode("https://www.google.com");
+  console.log(`Status Code: ${statusCode}`);
+
+  console.log(syncFoo());
+})();
