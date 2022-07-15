@@ -1,13 +1,19 @@
 {
-  "name": "dual-package-cjs-proxy",
+  "name": "@teppeis/dual-package-cjs-proxy-sample",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Sample project for dual package with CJS proxy",
   "type": "module",
+  "main": "./index.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js",
+    "default": "./index.cjs"
+  },
   "scripts": {
     "build": "tsc && npm run esbuild",
     "clean": "rm -rf dist",
-    "esbuild": "esbuild --bundle src/exportSyncForCJS.ts --outfile=dist/bundleSync.cjs --platform=node"
+    "esbuild": "esbuild --bundle src/exportSyncForCJS.ts --outfile=dist/bundleSync.cjs --platform=node --external:./node_modules/*"
   },
   "keywords": [],
   "author": "Teppei Sato <teppeis@gmail.com>",
