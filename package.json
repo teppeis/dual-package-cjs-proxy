@@ -10,6 +10,10 @@
     "import": "./dist/index.js",
     "default": "./index.cjs"
   },
+  "files": [
+    "dist",
+    "index.cjs"
+  ],
   "scripts": {
     "build": "tsc && npm run esbuild",
     "clean": "rm -rf dist",
