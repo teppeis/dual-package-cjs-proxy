@@ -1,1 +1,3 @@
-export const syncFoo = () => "sync foo!";
+import { hello } from "./util.js";
+
+export const syncFoo = () => hello("foo");
