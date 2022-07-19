@@ -1,6 +1,6 @@
 {
   "name": "@teppeis/dual-package-cjs-proxy-sample",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Sample project for dual package with CJS proxy",
   "publishConfig": {
     "access": "public"
