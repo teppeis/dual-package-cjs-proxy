@@ -1,7 +1,13 @@
 # Sample project for dual package with CJS proxy
 
-- Synchronous functions or values: Published as a single bundled file with esbuild
 - Asynchronous functions: Export native ESM implementation via CJS proxy
+- Synchronous functions or values: Export as a single bundled file with esbuild
+
+### Usage
+
+```console
+$ npm i @teppeis/dual-package-cjs-proxy-sample
+```
 
 ## Lisense
 
